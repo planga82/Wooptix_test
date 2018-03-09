@@ -1,0 +1,35 @@
+Filter = Convolution Kernel = Relacion de pesos a aplicarpara calcular la salida de una neurona
+Alto / ancho del filto = 5x5 --> Coge un cuadrado de ese tamaño para aplicar el filtro y calcular la salida
+Stride = Cuando desplazamos el cuadrado para el calculo de una neurona a la de su lado. esto nos da la reducción de tamaño de una capa a otra.
+Feature Map = Capa en la que todas las neuronas usan el mismo filto
+Poda --> Eliminamos feature maps
+
+
+
+La funcion debe retornar un elemento de la lista  self.fmaps_idxs  --> return self.fmaps_idxs[xxxxx]
+self.fmaps_idxs[0 to 1120] -->  
+	[0, 32) --> First Convolution Layer (32)
+	[32, 96) --> Second Convolution layer (64) 
+	[96, 1120) --> FC firs Layer (1024)
+
+
+RandomPruner --> Coge aleatoriamente un indice del array y lo devuelve
+
+Random
+----------------------------------------------------------------------------------------------------------
+018-02-02 20:14:01.578783: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX
+[8381]   2018-02-02 20:14:01,675 INFO random| Loading graph from: logdir/checkpoint-9999
+[8381]   2018-02-02 20:14:06,882 INFO random| Test accuracy 0.99299997, pruned: 0
+[8381]   2018-02-02 20:14:11,857 INFO random| Test accuracy 0.99299997, pruned: 1
+[8381]   2018-02-02 20:14:16,848 INFO random| Test accuracy 0.99260002, pruned: 2
+
+
+
+MinWeight --> Calcula el valor absoluto de los pesos y los suma para cada capa. Lo mete todo en un arrays, lo ordena y saca la capa que menos peso tiene
+
+
+
+
+Taylor expansion
+
+
